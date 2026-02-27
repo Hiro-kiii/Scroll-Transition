@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>04-Column-Random-Grid</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div class="spacer">Scroll Down</div>
+<section class="stage">
+  <div class="layers">
+    <svg class="layer" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <defs>
+        <mask id="mask1" maskUnits="userSpaceOnUse">
+          <rect x="0" y="0" width="100" height="100" fill="#000000"/>
+          <g id="blinds1"></g>
+        </mask>
+      </defs>
+      <image href="img/pic-1.jpg"
+        x="0" y="0" width="100" height="100"
+        preserveAspectRatio="xMidYMid slice"
+        mask="url(#mask1)"/>
+    </svg>
+    <svg class="layer" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <defs>
+        <mask id="mask2" maskUnits="userSpaceOnUse">
+          <rect x="0" y="0" width="100" height="100" fill="#000000"/>
+          <g id="blinds2"></g>
+        </mask>
+      </defs>
+      <image href="img/pic-2.jpg"
+        x="0" y="0" width="100" height="100"
+        preserveAspectRatio="xMidYMid slice"
+        mask="url(#mask2)"/>
+    </svg>
+    <svg class="layer" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <defs>
+        <mask id="mask3" maskUnits="userSpaceOnUse">
+          <rect x="0" y="0" width="100" height="100" fill="#000000"/>
+          <g id="blinds3"></g>
+        </mask>
+      </defs>
+      <image href="img/pic-3.jpg"
+        x="0" y="0" width="100" height="100"
+        preserveAspectRatio="xMidYMid slice"
+        mask="url(#mask3)"/>
+    </svg>
+    <div class="progress-bar">
+      <div class="segment">
+        <div class="fill"></div>
+      </div>
+      <div class="segment">
+        <div class="fill"></div>
+      </div>
+      <div class="segment">
+        <div class="fill"></div>
+      </div>
+    </div>
+    <div class="texts">
+      <div class="txt">
+        <h1>FIRST<br>
+          IMAGE</h1>
+        <h2>Section transition</h2>
+        <span>画像をグリッド状のセルでマスクし、スクロールに連動して左から右へ開いていくことで、次の画像へ滑らかに切り替わるトランジションです。</span></div>
+      <div class="txt">
+        <h1>SECOND<br>
+          IMAGE</h1>
+        <h2>Section transition</h2>
+        <span>画像をグリッド状のセルでマスクし、スクロールに連動して左から右へ開いていくことで、次の画像へ滑らかに切り替わるトランジションです。</span></div>
+      <div class="txt">
+        <h1>THIRD<br>
+          IMAGE</h1>
+        <h2>Section transition</h2>
+        <span>画像をグリッド状のセルでマスクし、スクロールに連動して左から右へ開いていくことで、次の画像へ滑らかに切り替わるトランジションです。</span></div>
+    </div>
+  </div>
+</section>
+<div class="spacer">End</div>
+<script src="js/gsap.min.js"></script> 
+<script src="js/ScrollTrigger.min.js"></script> 
+<script src="js/lenis.min.js"></script> 
+<script src="js/script.js" defer></script>
+</body>
+</html>

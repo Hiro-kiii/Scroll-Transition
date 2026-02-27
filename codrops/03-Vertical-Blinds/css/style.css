@@ -1,0 +1,120 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Quicksand:wght@300..700&display=swap');
+/* reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", "Noto Sans JP", sans-serif;
+  background-color: #000;
+}
+.spacer {
+  height: 100vh;
+  color: #fff;
+  display: grid;
+  place-items: center;
+}
+/*-------------------------------------------
+= stage
+-------------------------------------------*/
+.stage {
+  height: 500vh;
+  position: relative;
+}
+.layers {
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.layer image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.texts {
+  padding: 3vw;
+}
+.txt {
+  position: absolute;
+  width: 100%;
+  color: #fff;
+  text-transform: uppercase;
+  clip-path: inset(100% 0 0 0);
+  transform: translateY(40px);
+}
+.txt h1 {
+  font-size: clamp(4.8rem, 6.8vw, 13.6rem);
+  letter-spacing: 0.12em;
+  line-height: 1;
+}
+.txt h2 {
+  margin-top: 6vw;
+  font-size: clamp(1.4rem, 1.067vw, 1.8rem);
+  letter-spacing: 0.24em;
+}
+.txt span {
+  display: block;
+  font-size: clamp(1.1rem, 0.8vw, 1.2rem);
+  width: 20%;
+  margin-top: 30px;
+  line-height: 1.8;
+  letter-spacing: normal;
+}
+.progress-bar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 4rem;
+  display: flex;
+  gap: 1rem;
+  z-index: 20;
+}
+.segment {
+  flex: 1;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  position: relative;
+}
+.fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #fff;
+}
+@media screen and (max-width: 1024px) {
+  .txt span {
+    width: 35%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .txt span {
+    width: 50%;
+  }
+}
